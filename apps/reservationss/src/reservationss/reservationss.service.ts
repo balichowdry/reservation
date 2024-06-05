@@ -1,26 +1,39 @@
 import { Injectable } from '@nestjs/common';
-import { CreateReservationssDto } from './dto/create-reservationss.dto';
+
+import { ReservationsRepository } from './reservationss.repository';
+import { CreateReservationDto } from './dto/create-reservationss.dto';
 import { UpdateReservationssDto } from './dto/update-reservationss.dto';
 
 @Injectable()
-export class ReservationssService {
-  create(createReservationssDto: CreateReservationssDto) {
-    return 'This action adds a new reservationss';
+export class ReservationsService {
+  constructor(
+    private readonly reservationsRepository: ReservationsRepository,
+  ) {}
+
+  async createReservation(createReservationDto: CreateReservationDto) {
+    return this.reservationsRepository.create({
+      ...createReservationDto,
+      timestamp: new Date(),
+      userId: '123', // for now just hard-code it
+    });
   }
 
-  findAll() {
-    return `This action returns all reservationss`;
+  async findAll() {
+    return this.reservationsRepository.find({});
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} reservationss`;
+  async findOne(_id: string) {
+    return this.reservationsRepository.findOne({ _id });
   }
 
-  update(id: number, updateReservationssDto: UpdateReservationssDto) {
-    return `This action updates a #${id} reservationss`;
+  async update(_id: string, updateReservationDto: UpdateReservationssDto) {
+    return this.reservationsRepository.findOneAndUpdate(
+      { _id },
+      { $set: updateReservationDto },
+    );
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} reservationss`;
+  async remove(_id: string) {
+    return this.reservationsRepository.findOneAndDelete({ _id });
   }
 }
