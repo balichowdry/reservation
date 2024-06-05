@@ -1,3 +1,12 @@
+Reservation service with CURD operations developed as a microservice using tools below 
+
+NestJS - as the backend framework
+TypeORM - as the Object-Relational Mapper (ORM)
+MongoDB - as the database
+Postman - for Testing
+TypeScript - as the programming language
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
