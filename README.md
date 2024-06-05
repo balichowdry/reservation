@@ -82,17 +82,7 @@ To retrieve a specific reservation, we use the GET request, and we provide the I
 <img width="547" alt="Screenshot 2024-06-05 at 4 05 09 PM" src="https://github.com/balichowdry/reservation/assets/3157273/17d2e2d5-66af-4e09-bdc5-3c34746b03dc">
 
 
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - [Bilal Sattar](https://github.com/balichowdry/)
 
-## License
-
-Nest is [MIT licensed](LICENSE).
